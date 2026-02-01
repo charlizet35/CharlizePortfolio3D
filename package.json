@@ -10,7 +10,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@react-three/fiber": "^9.5.0",
+    "@react-three/drei": "^9.88.0",
+    "@react-three/fiber": "^8.15.0",
     "@splinetool/r3f-spline": "^1.0.2",
     "@splinetool/react-spline": "^4.1.0",
     "@splinetool/runtime": "^1.12.46",
@@ -21,7 +22,7 @@
     "react-dom": "^19.2.0",
     "react-router-dom": "^7.13.0",
     "tailwindcss": "^4.1.18",
-    "three": "^0.182.0"
+    "three": "^0.156.1"
   },
   "devDependencies": {
     "@eslint/js": "^9.39.1",
