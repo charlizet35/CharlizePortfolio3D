@@ -13,11 +13,13 @@
     "@react-three/fiber": "^9.5.0",
     "@splinetool/r3f-spline": "^1.0.2",
     "@splinetool/react-spline": "^4.1.0",
+    "@splinetool/runtime": "^1.12.46",
     "autoprefixer": "^10.4.24",
     "framer-motion": "^12.29.2",
     "postcss": "^8.5.6",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
+    "react-router-dom": "^7.13.0",
     "tailwindcss": "^4.1.18",
     "three": "^0.182.0"
   },
