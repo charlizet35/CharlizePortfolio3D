@@ -1,5 +1,6 @@
 import React from 'react';
 import Spline from '@splinetool/react-spline';
+import Typewriter from 'typewriter-effect';
 
 const Home = () => {
   return (
@@ -33,10 +34,32 @@ const Home = () => {
         pointerEvents: 'none'
       }}>
         <h1 style={{fontSize: '6rem', margin: '0 0 1rem 0', lineHeight: 1}}>
-          Hi, I'm Charlize
+          <Typewriter
+            onInit={(typewriter) => {
+              typewriter
+                .typeString("Hi, I'm Charlize")
+                .pauseFor(500)
+                .start();
+            }}
+            options={{ 
+                delay: 75,
+                //cursor: '' 
+            }}
+          />
         </h1>
         <h2 style={{fontSize: '2rem', margin: '0 0 1rem 0', lineHeight: 1}}>
-          Fullstack Developer/3D Creative Technologist
+          <Typewriter
+            onInit={(typewriter) => {
+              typewriter
+                .typeString("Fullstack Developer / 3D Creative Technologist")
+                .pauseFor(500)
+                .start();
+            }}
+            options={{ 
+                delay: 75,
+                //cursor: '' 
+            }}
+          />
         </h2>
       </div>
 
@@ -53,10 +76,28 @@ const Home = () => {
         pointerEvents: 'none'
       }}>
         <h2 style={{fontSize: '2rem', margin: '0 0 1rem 0', lineHeight: 1}}>
-          Building interactive 3D experiences through code, tools, and design
+          <Typewriter
+            onInit={(typewriter) => {
+              typewriter
+                .typeString("Building interactive 3D experiences through code, tools, and design")
+                .pauseFor(500)
+                .start();
+            }}
+            options={{ delay: 50 }}
+          />
         </h2>
         <h3 style={{fontSize: '1.3rem', margin: '0 0 1rem 0', lineHeight: 1}}>
-          Hover around the screen and interact with the model. Explore my portfolio through the navigation icons above :3 
+          <Typewriter
+            onInit={(typewriter) => {
+              typewriter
+                .typeString(
+                  "Hover around the screen and interact with the model. Explore my portfolio through the navigation icons above :3"
+                )
+                .pauseFor(500)
+                .start();
+            }}
+            options={{ delay: 25 }}
+          />
         </h3>
       </div>
     </div>
