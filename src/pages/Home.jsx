@@ -7,7 +7,7 @@ const Home = () => {
   const [showUI, setShowUI] = useState(false);
   const [showLoader, setShowLoader] = useState(false);
 
-  // Only show loader if load takes longer than 2s
+  //show loader if load > 2s
   useEffect(() => {
     const loaderTimer = setTimeout(() => {
       setShowLoader(true);
@@ -18,7 +18,6 @@ const Home = () => {
 
   return (
     <div style={{ position: 'absolute', inset: 0 }}>
-      {/* Spline scene */}
       <Spline
         scene="https://prod.spline.design/GMRVPW6hJe-750Rk/scene.splinecode"
         style={{
@@ -37,7 +36,7 @@ const Home = () => {
         }}
       />
 
-      {/* Loader (only if slow) */}
+      {/* loader */}
       {showLoader && !sceneReady && (
         <div
           style={{
@@ -62,7 +61,7 @@ const Home = () => {
         </div>
       )}
 
-      {/* UI + text (gated) */}
+      {/* gated ui/text */}
       <div
         style={{
           opacity: showUI ? 1 : 0,
