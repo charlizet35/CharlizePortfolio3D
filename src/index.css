@@ -1,5 +1,10 @@
+@font-face {
+  font-family: 'Contb';
+  src: url('/fonts/contb.ttf') format('truetype');
+}
+
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Contb', system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
