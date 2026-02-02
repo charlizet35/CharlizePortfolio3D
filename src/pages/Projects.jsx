@@ -16,7 +16,7 @@ const Projects = () => {
         right: 5,
         width: 180,
         height: 39,
-        backgroundColor: 'white', // match your page background
+        backgroundColor: '#ebebeb', // match your page background
         pointerEvents: 'none'
         }} />
 
