@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Spline from '@splinetool/react-spline';
+import Typewriter from 'typewriter-effect';
 
 const AboutMe = () => {
   return (
