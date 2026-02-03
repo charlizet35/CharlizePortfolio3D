@@ -8,6 +8,7 @@ import Experience from './pages/Experience';
 import Projects from './pages/Projects';
 import MichelinMaihem from './pages/ProjectPages/MichelinMaihem';
 import Portfolio from './pages/ProjectPages/3DPortfolio';
+import { Analytics } from '@vercel/analytics/react';
 
 function LocationLogger() {
   const location = useLocation();
@@ -40,6 +41,7 @@ function App() {
           </Routes>
         </div>
       </div>
+      <Analytics />
     </Router>
   );
 }
