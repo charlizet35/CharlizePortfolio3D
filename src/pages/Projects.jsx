@@ -44,13 +44,16 @@ const Projects = () => {
       console.log('Target:', e.target);
       console.log('Target name:', e.target?.name);
       
-      //
-      if (e.target && e.target.name === 'Project1') {
-        console.log('Project1 clic, navigating...');
+        //here for navigation
+      if (e.target && e.target.name === 'Rectangle1') {
+        console.log('Rectangle1 clic, navigating...');
         navigate('/MichelinMaihem');
       } else {
-        console.log('Not Project1. Name was:', e.target?.name);
+        console.log('Not Rectangle1. Name was:', e.target?.name);
       }
+
+
+        
     }
 
   return (
