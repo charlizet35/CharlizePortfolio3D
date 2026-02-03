@@ -6,6 +6,7 @@ import Home from './pages/Home';
 import AboutMe from './pages/AboutMe';
 import Experience from './pages/Experience';
 import Projects from './pages/Projects';
+import MichelinMaihem from './pages/MichelinMaihem';
 
 function LocationLogger() {
   const location = useLocation();
@@ -35,6 +36,7 @@ function App() {
             <Route path="/about" element={<AboutMe />} />
             <Route path="/experience" element={<Experience />} />
             <Route path="/projects" element={<Projects />} />
+            <Route path="/MichelinMaihem" element={<MichelinMaihem />} />
           </Routes>
         </div>
       </div>

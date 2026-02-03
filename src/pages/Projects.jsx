@@ -1,12 +1,14 @@
 import React, { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import Spline from '@splinetool/react-spline';
 import Typewriter from 'typewriter-effect';
-
 
 const Projects = () => {
     const [sceneReady, setSceneReady] = useState(false);
     const [showUI, setShowUI] = useState(false);
     const [showLoader, setShowLoader] = useState(false);
+    const [splineApp, setSplineApp] = useState(null);
+    const navigate = useNavigate();
 
     useEffect(() => {
             const loaderTimer = setTimeout(() => {
@@ -15,6 +17,41 @@ const Projects = () => {
     
             return () => clearTimeout(loaderTimer);
     }, []);
+
+    function onLoad(spline) {
+      console.log('Spline loaded:', spline);
+      setSplineApp(spline);
+      
+      //log all obj
+      if (spline && typeof spline.getAllObjects === 'function') {
+        const allObjects = spline.getAllObjects();
+        console.log('=== ALL OBJECTS ===');
+        allObjects.forEach(obj => {
+          console.log('Name:', obj.name, '| Has events:', obj._emitter ? 'yes' : 'no');
+        });
+      }
+      
+      setTimeout(() => {
+        setSceneReady(true);
+        setShowLoader(false);
+        setTimeout(() => setShowUI(true), 600);
+      }, 400);
+    }
+
+    function onSplineMouseUp(e) {
+      console.log('=== onSplineMouseUp triggered ===');
+      console.log('Event:', e);
+      console.log('Target:', e.target);
+      console.log('Target name:', e.target?.name);
+      
+      //
+      if (e.target && e.target.name === 'Project1') {
+        console.log('Project1 clic, navigating...');
+        navigate('/MichelinMaihem');
+      } else {
+        console.log('Not Project1. Name was:', e.target?.name);
+      }
+    }
 
   return (
     <div style={{position: 'absolute', top: 0, left: 0, width: '100%', height: '100%'}}>
@@ -26,14 +63,8 @@ const Projects = () => {
           opacity: sceneReady ? 1 : 0,
           transition: 'opacity 0.8s ease',
         }}
-        onLoad={() => {
-          // let shaders + animation settle
-          setTimeout(() => {
-            setSceneReady(true);
-            setShowLoader(false);
-            setTimeout(() => setShowUI(true), 600);
-          }, 400);
-        }}
+        onLoad={onLoad}
+        onSplineMouseUp={onSplineMouseUp}
       />
  
       {/* loader */}
@@ -69,7 +100,7 @@ const Projects = () => {
           transition: 'opacity 0.8s ease',
         }}
       >
-        //cover up watermark
+        {/* cover up watermark */}
         <div style={{
         position: 'absolute',
         bottom: 20,
@@ -85,4 +116,3 @@ const Projects = () => {
 };
 
 export default Projects;
-
