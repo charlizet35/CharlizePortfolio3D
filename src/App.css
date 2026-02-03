@@ -45,3 +45,41 @@
 .read-the-docs {
   color: #888;
 }
+
+.gradient-background {
+  background: linear-gradient(to bottom, #b6b6b6b6 20%, #edeeed 85%);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+/*project classes*/
+.project-card {
+  background-color: #2a2a2a;      
+  border: 2px solid #1a1a1a;      
+  border-radius: 16px;             
+  padding: 2rem;
+  width: 90%;                     
+  max-width: 800px;                
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  
+  display: flex;
+  flex-direction: column;          /* Stacks content vertically */
+  gap: 1.5rem;                     /* Spacing between elements */
+  color: #eeeeee;
+}
+
+.project-media {
+  width: 100%;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.caption {
+  font-size: 0.9rem;
+  color: #aaa;
+  font-style: italic;
+  margin-top: -1rem;              
+}
