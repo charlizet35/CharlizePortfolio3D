@@ -76,7 +76,7 @@ const Projects = () => {
         right: 5,
         width: 180,
         height: 39,
-        backgroundColor: 'white',
+        backgroundColor: '#ebebeb',
         pointerEvents: 'none'
         }} />
       </div>
