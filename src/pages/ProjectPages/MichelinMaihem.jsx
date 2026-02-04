@@ -24,6 +24,7 @@ const MichelinMaihem = () => {
           <p className="team-label"><i>Team:</i></p>
           <p className="team-list">
             <span style={{ color: '#525252' }}>Charlize Tran (3D Level Designer/3D Artist/Developer), </span>
+            <break />
               Abida Ahmed (Developer/Artist), 
             Josh Miguel (Team Lead/Developer), Alan Tony-Itoya (Developer/Sound Designer), 
             Derek Herrera (UI Designer), Ebrahim Vejlani (UI Designer), Ishita Uddarraju (Artist), 
@@ -32,8 +33,8 @@ const MichelinMaihem = () => {
         </header>
 
         <section className="text-content">
-          <h3>The Challenge</h3>
-          <p> This was hard as shit why isn't anything working???
+          <h3>Description</h3>
+          <p> Michelin Maihem is a frantic, physics-based couch co-op game where players are robots running the world's first fully automated restaurant. Players must work together to prepare and serve food to customers while dodging obstacles in a chaotic kitchen environment.
             <break/>
           </p>
         </section>
