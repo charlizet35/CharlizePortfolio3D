@@ -69,7 +69,7 @@ const AboutMe = () => {
           transition: 'opacity 0.8s ease',
         }}
       >
-        //cover up watermark
+        
         <div style={{
         position: 'absolute',
         bottom: 20,

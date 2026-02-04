@@ -69,7 +69,7 @@ const Home = () => {
           transition: 'opacity 0.8s ease',
         }}
       >
-        {/* watermark cover */}
+
         <div
           style={{
             position: 'absolute',

@@ -21,11 +21,12 @@ const Header = () => {
         transition: 'all 0.3s ease',
         width: '85px',
         height: '85px',
-        position: 'relative' 
+        position: 'relative', 
+        
     };
 
     const hoverStyle = {
-        borderColor: '#d4d4d4',
+        borderColor: '#ffffff',
         backgroundColor: 'rgba(255,255,255,0.08)',
         boxShadow: '0 0 12px rgba(255,255,255,0.25)'
     };

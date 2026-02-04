@@ -1,36 +1,44 @@
 import React from 'react';
 import "../../App.css";
+import GameImage from '../../assets/3d_play_scene.png';
 
 const MichelinMaihem = () => {
   return (
     <div className="gradient-background">
-      <div className="project-card">
-        {/* header*/}
+      <article className="project-card">
+        
         <header>
-          <h1 style={{ margin: 0 }}>Michelin Maihem</h1>
-          <p style={{ color: '#888' }}>Case Study: 3D Experience Design</p>
-        </header>
+          <h1 style={{fontSize: '3.5rem'}}>Michelin Maihem</h1>
+          <p className="project-date">A 3 month project, Dec 2025</p>
 
-        {/* image/caption */}
-        <figure style={{ margin: 0 }}>
+          <figure>
           <img 
-            src="https://via.placeholder.com/800x400" 
+            src={GameImage}
             alt="Project Screenshot" 
             className="project-media"
+            style={{ width: '500px', height: 'auto' }}
           />
           <figcaption className="caption">Initial render of the Spline environment.</figcaption>
         </figure>
+          
+          <p className="team-label"><i>Team:</i></p>
+          <p className="team-list">
+            <span style={{ color: '#525252' }}>Charlize Tran (3D Level Designer/3D Artist/Developer), </span>
+              Abida Ahmed (Developer/Artist), 
+            Josh Miguel (Team Lead/Developer), Alan Tony-Itoya (Developer/Sound Designer), 
+            Derek Herrera (UI Designer), Ebrahim Vejlani (UI Designer), Ishita Uddarraju (Artist), 
+            Siara Uddin (Artist)
+          </p>
+        </header>
 
-        {/* info */}
-        <section>
+        <section className="text-content">
           <h3>The Challenge</h3>
-          <p>
-            example example example example explanation etc. blah blah blah
-            
+          <p> This was hard as shit why isn't anything working???
+            <break/>
           </p>
         </section>
 
-      </div>
+      </article>
     </div>
   );
 };

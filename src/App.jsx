@@ -24,7 +24,7 @@ function App() {
   return (
     <Router>
       <LocationLogger />
-      <div className="App" style={{ position: 'relative', width: '100%', height: '100vh', margin: 0, padding: 0, overflow: 'hidden' }}>
+      <div className="App" style={{ position: 'relative', width: '100%', height: '100vh', margin: 0, padding: 0 }}>
         
         <div style={{ position: 'relative', zIndex: 50, pointerEvents: 'none' }}>
           <Header />
