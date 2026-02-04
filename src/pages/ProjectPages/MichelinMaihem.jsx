@@ -39,6 +39,20 @@ const MichelinMaihem = () => {
           </p>
         </section>
 
+        <figure style={{ margin: 0 }}>
+          <div className="video-container">
+            <iframe 
+              src="https://www.youtube.com/embed/9iDPN0rl_x8?si=YhWfQ7g6kMEI84hA&autoplay=1&mute=1&loop=1&playlist=9iDPN0rl_x8" 
+              title="YouTube video player" 
+              frameBorder="0" 
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+              referrerPolicy="strict-origin-when-cross-origin" 
+              allowFullScreen
+            ></iframe>
+          </div>
+          <figcaption className="caption">Michelin Maihem Gameplay Preview</figcaption>
+        </figure>
+
       </article>
     </div>
   );
