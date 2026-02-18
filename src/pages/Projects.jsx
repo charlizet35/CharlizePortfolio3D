@@ -11,12 +11,37 @@ const Projects = () => {
     const navigate = useNavigate();
 
     useEffect(() => {
-            const loaderTimer = setTimeout(() => {
-                setShowLoader(true);
-            }, 2000);
-    
-            return () => clearTimeout(loaderTimer);
+      const loaderTimer = setTimeout(() => {
+          setShowLoader(true);
+      }, 2000);
+
+      return () => clearTimeout(loaderTimer);
     }, []);
+
+    useEffect(() => {
+      const canvas = document.querySelector('canvas');
+      if (!canvas) return;
+
+      let totalDelta = 0;
+
+      const handleWheel = (e) => {
+          totalDelta += e.deltaY;
+          const nav = document.querySelector('nav');
+          if (!nav) return;
+
+          if (totalDelta > 150) {
+              nav.style.transition = 'transform 0.1s ease';
+              nav.style.transform = 'translateY(-90%)';
+          } else if (totalDelta <= 0) {
+              nav.style.transition = 'transform 0.1s ease';
+              nav.style.transform = 'translateY(0)';
+              totalDelta = 0;
+          }
+      };
+
+      canvas.addEventListener('wheel', handleWheel, { passive: true });
+      return () => canvas.removeEventListener('wheel', handleWheel);
+    }, [sceneReady]);
 
     function onLoad(spline) {
       console.log('Spline loaded:', spline);
@@ -48,7 +73,12 @@ const Projects = () => {
       if (e.target && e.target.name === 'Rectangle1') {
         console.log('Rectangle1 clic, navigating...');
         navigate('/MichelinMaihem');
-      } else {
+      } 
+      else if (e.target && e.target.name === 'Rectangle2') {
+        console.log('Rectangle2 clicked, navigating...');
+        navigate('/3DPortfolio');
+      }
+      else {
         console.log('Not Rectangle1. Name was:', e.target?.name);
       }
 
@@ -57,7 +87,7 @@ const Projects = () => {
     }
 
   return (
-    <div style={{position: 'absolute', top: 0, left: 0, width: '100%', height: '100%'}}>
+    <div style={{width: '100%', height: '100%'}}>
       <Spline
         scene="https://prod.spline.design/Hbtm1NoPMbDZlWqe/scene.splinecode"
         style={{
@@ -110,7 +140,7 @@ const Projects = () => {
         right: 5,
         width: 180,
         height: 39,
-        backgroundColor: '#ebebeb',
+        backgroundColor: '#f0f0f0',
         pointerEvents: 'none'
         }} />
       </div>
