@@ -5,6 +5,11 @@ import Level1Gif from '../../assets/Level1.gif';
 import Level1Img from '../../assets/Level1.png';
 import Level2Gif from '../../assets/Level2.gif';
 import Level2Img from '../../assets/Level2.png';
+import Sketch from '../../assets/npc_design.jpg';
+import front from '../../assets/npc_front.png';
+import side from '../../assets/npc_side.png';
+import back from '../../assets/npc_back.png';
+import walk from '../../assets/npc_walk.png';
 
 const MichelinMaihem = () => {
   return (
@@ -54,7 +59,7 @@ const MichelinMaihem = () => {
           <p> 
             Levels in progress
           </p>
-          <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '50px', paddingLeft: '45px', paddingRight: '45px', marginTop: '12px' }}>
+          <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '35px', paddingLeft: '45px', paddingRight: '45px', marginTop: '12px' }}>
             <div style={{ display: 'flex', flexDirection: 'column', width: '65%' }}>
               <img src={Level1Gif} alt="Level 1 Gif" style={{ width: '100%', borderRadius: '12px' }} />
               <figcaption className="caption">Level 1 Layout</figcaption>
@@ -75,11 +80,27 @@ const MichelinMaihem = () => {
           </div>
           <figcaption className="caption">Level In-Game Perspective</figcaption>
 
-
-
           <p> 
             NPCs in progress
           </p>
+          <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '50px', paddingLeft: '45px', paddingRight: '45px', marginTop: '12px' }}>
+            <img src={Sketch} alt="NPC Design Sketch" style={{ width: '50%', borderRadius: '12px' }} />
+          </div>
+          <figcaption className="caption">Initial NPC Design Sketch</figcaption>
+
+          <div style={{ display: 'flex', justifyContent: 'center', gap: '35px', paddingLeft: '45px', paddingRight: '45px', marginTop: '40px' }}>
+            <div style={{ display: 'flex', flexDirection: 'column', width: '40%' }}>
+              <img src={front} alt="front" style={{ width: '100%', borderRadius: '12px' }} />
+            </div>
+            <div style={{ display: 'flex', flexDirection: 'column', width: '40%' }}>
+              <img src={side} alt="side" style={{ width: '100%', borderRadius: '12px' }} />
+            </div>
+            <div style={{ display: 'flex', flexDirection: 'column', width: '40%' }}>
+              <img src={walk} alt="walk" style={{ width: '100%', borderRadius: '12px' }} />
+            </div>
+          </div>
+          <figcaption className="caption">NPC Model</figcaption>
+
 
         </section>
 
