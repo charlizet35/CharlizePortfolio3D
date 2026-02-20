@@ -18,7 +18,7 @@ const MichelinMaihem = () => {
             className="project-media"
             style={{ width: '500px', height: 'auto' }}
           />
-          <figcaption className="caption">Initial render of the Spline environment.</figcaption>
+          {/*<figcaption className="caption">Initial render of the Spline environment.</figcaption>*/}
         </figure>
           
           <p className="team-label"><i>Team:</i></p>
@@ -37,21 +37,30 @@ const MichelinMaihem = () => {
           <p> Michelin Maihem is a frantic, physics-based couch co-op game where players are robots running the world's first fully automated restaurant. Players must work together to prepare and serve food to customers while dodging obstacles in a chaotic kitchen environment.
             <break/>
           </p>
+          <p>
+            This game is heavily inspired by the Overcooked series by Ghost Town Games. We wanted to recreate the same chaotic stress and fun with a heavier emphasis on character physics-based controls and in-level modifiers including bombs, lightning, and trains.
+          </p>
+          <p>
+            I was primarily responsible for designing and building the 3D level layouts including lighting and post processing, although Alan provided the initial sketch layout. I also designed and created the NPCs with Blender, implemented them using Unity's AI Navmesh system, and was a developer for various gameplay features.
+          </p>
         </section>
 
         <figure style={{ margin: 0 }}>
-          <div className="video-container">
-            <iframe 
-              src="https://www.youtube.com/embed/9iDPN0rl_x8?si=YhWfQ7g6kMEI84hA&autoplay=1&mute=1&loop=1&playlist=9iDPN0rl_x8" 
-              title="YouTube video player" 
-              frameBorder="0" 
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-              referrerPolicy="strict-origin-when-cross-origin" 
+          <div className="video-container" style={{ borderRadius: '12px', overflow: 'hidden', width: '65%', margin: '0 auto' }}>
+            <iframe
+              src="https://www.youtube.com/embed/9iDPN0rl_x8?si=YhWfQ7g6kMEI84hA&loop=1&playlist=9iDPN0rl_x8"
+              title="YouTube video player"
+              frameBorder="0"
+              allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerPolicy="strict-origin-when-cross-origin"
               allowFullScreen
+              style={{ width: '100%', aspectRatio: '16/9', display: 'block', borderRadius: '12px' }}
             ></iframe>
           </div>
           <figcaption className="caption">Michelin Maihem Gameplay Preview</figcaption>
         </figure>
+
+        
 
       </article>
     </div>

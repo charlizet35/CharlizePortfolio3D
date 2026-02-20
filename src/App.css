@@ -104,7 +104,7 @@
 
 .caption {
   font-size: 0.85rem;
-  color: #525252;
+  color: #8d8d8d;
   font-style: italic;
   margin-top: 8px;
 }
@@ -125,6 +125,7 @@
   line-height: 1.4;
   text-align: left;
   font-size: 0.9rem;
+  font-weight: 300;
   padding-left: 45px;
   padding-right: 45px;
 }
