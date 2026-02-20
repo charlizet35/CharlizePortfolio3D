@@ -20,14 +20,22 @@ const MichelinMaihem = () => {
           <h1 style={{fontSize: '3.5rem'}}>Michelin Maihem</h1>
           <p className="project-date">A 3 month project, Sep 2025</p>
 
-          <figure>
+          <figure className="image-hover-container" style={{ margin: 0, marginTop: '15px' }}>
             <img 
               src={GameImage}
               alt="Project Screenshot" 
               className="project-media"
-              style={{ width: '100%', maxWidth: '500px', height: 'auto' }}
+              style={{ width: '100%', maxWidth: '500px', height: 'auto'}}
             />
-            {/*<figcaption className="caption">Initial render of the Spline environment.</figcaption>*/}
+            <a 
+              href="https://github.com/charlizet35/Michelin_Maihem" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="image-overlay-link"
+            >
+              <span className="overlay-icon">↗</span>
+              <span style={{ color: '#cccccc' }}>View Code</span>
+            </a>
           </figure>
           
           <p className="team-label"><i>Team:</i></p>
