@@ -54,10 +54,25 @@ const MichelinMaihem = () => {
           <p> 
             Levels in progress
           </p>
-          <div style={{ display: 'flex', gap: '12px', paddingLeft: '45px', paddingRight: '45px', marginTop: '12px' }}>
-            <img src={Level1Gif} alt="Level 1 Gif" style={{ width: '48%', borderRadius: '12px' }} />
-            <img src={Level1Img} alt="Level 1 Image" style={{ width: '48%', borderRadius: '12px' }} />
+          <div style={{ display: 'flex', justifyContent: 'center', gap: '35px', paddingLeft: '45px', paddingRight: '45px', marginTop: '12px' }}>
+            <div style={{ display: 'flex', flexDirection: 'column', width: '40%' }}>
+              <img src={Level1Gif} alt="Level 1 Gif" style={{ width: '100%', borderRadius: '12px' }} />
+            </div>
+            <div style={{ display: 'flex', flexDirection: 'column', width: '40%' }}>
+              <img src={Level2Gif} alt="Level 1 Image" style={{ width: '100%', borderRadius: '12px' }} />
+            </div>
           </div>
+          {/*<figcaption className="caption">Level 1 Layout</figcaption> */}
+          
+          <div style={{ display: 'flex', justifyContent: 'center', gap: '35px', paddingLeft: '45px', paddingRight: '45px', marginTop: '12px' }}>
+            <div style={{ display: 'flex', flexDirection: 'column', width: '40%' }}>
+              <img src={Level1Img} alt="Level 2 Gif" style={{ width: '100%', borderRadius: '12px' }} />
+            </div>
+            <div style={{ display: 'flex', flexDirection: 'column', width: '40%' }}>
+              <img src={Level2Img} alt="Level 2 Image" style={{ width: '100%', borderRadius: '12px' }} />
+            </div>
+          </div>
+          <figcaption className="caption">Level 2 Layout</figcaption>
 
         </section>
 
