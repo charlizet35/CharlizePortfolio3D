@@ -55,7 +55,7 @@
 }
 
 .project-card {
-  background-color: #acacac86;
+  background-color: #dadada;
   border: 3px solid #646464;
   border-radius: 20px;
   padding: 1.5rem 2.5rem 2.5rem 2.5rem;
@@ -70,13 +70,27 @@
 }
 
 /* sections */
+
+@media (max-width: 600px) {
+  .project-card {
+    padding: 1rem;
+  }
+  .text-content h3,
+  .text-content p,
+  .team-list {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
 .project-card h1 {
   margin: 0;
   font-size: 2.5rem;
+  color: #414141;
 }
 
 .project-date {
-  color: #555555;
+  color: #8a8a8a;
   margin: 0;
   font-size: 0.95rem;
   margin-top: 10px;
@@ -84,16 +98,16 @@
 
 .team-label {
   font-size: 20px;
-  color: #5c5c5c;
+  color: #494949;
   margin: 15px 0 5px 0;
 }
 
 .team-list {
   color: #747474;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   line-height: 1.5;
-  padding-left: 45px;
-  padding-right: 45px;
+  padding-left: 110px;
+  padding-right: 110px;
   margin: 0;
 }
 
@@ -103,13 +117,14 @@
 }
 
 .caption {
-  font-size: 0.85rem;
-  color: #8d8d8d;
+  font-size: 0.825rem;
+  color: #868686;
   font-style: italic;
   margin-top: 8px;
 }
 
 .text-content h3 {
+  font-size: 1.7rem;
   color: #444343;
   margin-bottom: 6px;
   padding-top: 20px;
@@ -121,11 +136,10 @@
 }
 
 .text-content p {
-  color: #505050;
-  line-height: 1.4;
+  color: #696969;
+  line-height: 1.5;
   text-align: left;
-  font-size: 0.9rem;
-  font-weight: 300;
+  font-size: 0.825rem;
   padding-left: 45px;
   padding-right: 45px;
 }

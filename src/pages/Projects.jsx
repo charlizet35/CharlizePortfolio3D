@@ -31,7 +31,7 @@ const Projects = () => {
 
           if (totalDelta > 150) {
               nav.style.transition = 'transform 0.1s ease';
-              nav.style.transform = 'translateY(-90%)';
+              nav.style.transform = 'translateY(-%)';
           } else if (totalDelta <= 0) {
               nav.style.transition = 'transform 0.1s ease';
               nav.style.transform = 'translateY(0)';
