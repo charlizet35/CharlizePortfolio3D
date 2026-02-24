@@ -8,6 +8,7 @@ import Experience from './pages/Experience';
 import Projects from './pages/Projects';
 import MichelinMaihem from './pages/ProjectPages/MichelinMaihem';
 import UrgentCare from './pages/ProjectPages/UrgentCare';
+import Portfolio from './pages/ProjectPages/Portfolio';
 import { Analytics } from '@vercel/analytics/react';
 
 function LocationLogger() {
@@ -38,6 +39,7 @@ function App() {
             <Route path="/projects" element={<Projects />} />
             <Route path="/MichelinMaihem" element={<MichelinMaihem />} />
             <Route path="/UrgentCare" element={<UrgentCare />} />
+            <Route path="/Portfolio" element={<Portfolio />} />
           </Routes>
         </div>
       </div>

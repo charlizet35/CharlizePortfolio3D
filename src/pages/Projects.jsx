@@ -78,6 +78,10 @@ const Projects = () => {
         console.log('Rectangle2 clicked, navigating...');
         navigate('/UrgentCare');
       }
+      else if (e.target && e.target.name === 'Rectangle3') {
+        console.log('Rectangle3 clicked, navigating...');
+        navigate('/Portfolio');
+      }
       else {
         console.log('Not Rectangle1. Name was:', e.target?.name);
       }

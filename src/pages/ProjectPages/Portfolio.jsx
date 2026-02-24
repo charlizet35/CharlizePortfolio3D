@@ -1,5 +1,8 @@
 import React from 'react';
 import "../../App.css";
+import homepageGif from '../../assets/homepage_wave_example.gif';
+
+
 import HomePageDemo from '../../assets/HomePageDemo.gif';
 import image1 from '../../assets/image1.png';
 import image2 from '../../assets/image2.png';
@@ -9,24 +12,24 @@ import doctorVideo from '../../assets/doctor.mp4';
 import receptionistVideo from '../../assets/Receptionist.mp4';
 import adminVideo from '../../assets/admin_compressed.mp4';
 
-const UrgentCare = () => {
+const Portfolio = () => {
   return (
     <div className="gradient-background">
       <article className="project-card">
         
         <header>
-          <h1 style={{fontSize: '3.5rem'}}>Urgent Care Management System</h1>
-          <p className="project-date">A 4 month project, Feb 2025</p>
+          <h1 style={{fontSize: '3.5rem'}}>Portfolio App</h1>
+          <p className="project-date">A 2 month project, Jan 2026</p>
 
           <figure className="image-hover-container" style={{ margin: 0, marginTop: '15px' }}>
             <img 
-              src={HomePageDemo}
+              src={homepageGif}
               alt="Project Screenshot" 
               className="project-media"
               style={{ width: '100%', maxWidth: '500px', height: 'auto'}}
             />
             <a 
-              href="https://github.com/daynesmith/Urgent-Care-App" 
+              href="https://github.com/charlizet35/CharlizePortfolio3D" 
               target="_blank" 
               rel="noopener noreferrer"
               className="image-overlay-link"
@@ -38,26 +41,27 @@ const UrgentCare = () => {
           
           <p className="team-label"><i>Team:</i></p>
           <p className="team-list" >
-            <span style={{ color: '#525252' }}>Charlize Tran, </span>
-            <break />
-            Dayne Smith, Karen Suensom, Billy Ngo, Asibong Ephraim
+            <span style={{ color: '#525252' }}>Charlize Tran </span>
           </p>
         </header>
 
         <section className="text-content">
           <h3>01 Description</h3>
-          <p> My team and I were tasked with creating a management system for clinics that handled patient appointment bookings and medical history, doctor and staff scheduling, specialist referrals, billing, and inventory. As a result, we built a full-stack web application that managed these requirements. Built with Node.js, MySQL, Vite, and Azure, it offers secure role-based access and streamlined workflows for medical staff and patients. 
-            <break/>
+          <p> 
+            I built this portfolio app as a way to showcase my projects in an interactive and engaging way. I wanted to create a unique experience that reflected my personality and skills as a developer and 3D artist, while also providing an easy way for visitors to navigate through my work. My website features a 3D model that reacts to user interactions, as well as a dynamic layout that highlights my projects and achievements. 
           </p>
           <p>
-            Along with these core features, we also implemented reports with data queried from the database for clinic administrators to view and analyze.
+            I built the frontend with Spline and React, and the app is deployed on Vercel for seamless hosting and performance.
           </p>
         </section>
 
         <section className="text-content">
           <h3>02 Process</h3>
           <p> 
-            Before building, my team and I completed a domain analysis to determine the key features and requirements for our application, which included referencing existing clinic websites and personal medical portals. Given this research, we could construct our mini-world and define our scope, and subsequently develop our relational model and database schema. 
+            My inspiration first came from the NPC models I created for my game, Michelin Maihem. Having already rigged them, I realized I could create simple yet interesting animations that could follow small user interactions but wouldn't affect overall site performance.   
+          </p>
+          <p>
+            
           </p>
         
           <p>
@@ -134,4 +138,4 @@ const UrgentCare = () => {
   );
 };
 
-export default UrgentCare;
+export default Portfolio;
