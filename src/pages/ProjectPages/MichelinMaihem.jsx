@@ -57,15 +57,15 @@ const MichelinMaihem = () => {
           <p>
             This game is heavily inspired by the Overcooked series by Ghost Town Games. We wanted to recreate the same chaotic stress and fun with a heavier emphasis on character physics-based controls and in-level modifiers including bombs, lightning, and trains.
           </p>
-          <p>
-            I was primarily responsible for designing and building the 3D level layouts and start screen including lighting and post processing, although Alan provided the initial sketch layout. I also designed and created the NPCs with Blender, implemented them using Unity's AI Navmesh system, and was a developer for various gameplay features.
-          </p>
         </section>
 
         <section className="text-content">
           <h3>02 Process</h3>
+          <p>
+            I was primarily responsible for designing and building the 3D level layouts and start screen including lighting and post processing, although Alan provided the initial sketch layout. I also designed and created the NPCs with Blender, implemented them using Unity's AI Navmesh system, and was a developer for various gameplay features.
+          </p>
           <p> 
-            Levels in progress
+            Levels in progress:
           </p>
           <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '35px', paddingLeft: '45px', paddingRight: '45px', marginTop: '12px' }}>
             <div style={{ display: 'flex', flexDirection: 'column', width: '65%' }}>
@@ -89,7 +89,7 @@ const MichelinMaihem = () => {
           <figcaption className="caption">Level In-Game Perspective</figcaption>
 
           <p> 
-            NPCs in progress
+            NPCs in progress:
           </p>
           <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '50px', paddingLeft: '45px', paddingRight: '45px', marginTop: '12px' }}>
             <img src={Sketch} alt="NPC Design Sketch" style={{ width: '50%', borderRadius: '12px' }} />
@@ -114,9 +114,6 @@ const MichelinMaihem = () => {
 
         <section className="text-content">
           <h3>03 Result</h3>
-          <p> 
-
-          </p>
         </section>
 
         <figure style={{ margin: 0, marginTop: '30px' }}>

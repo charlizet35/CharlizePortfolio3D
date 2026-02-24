@@ -1,16 +1,17 @@
 import React from 'react';
 import "../../App.css";
-import Sketch from '../../assets/npc_design.jpg';
 import front from '../../assets/npc_front.png';
 import side from '../../assets/npc_side.png';
-import back from '../../assets/npc_back.png';
-import walk from '../../assets/npc_walk.png';
+
 
 import HomePageDemo from '../../assets/HomePageDemo.gif';
 import image1 from '../../assets/image1.png';
 import image2 from '../../assets/image2.png';
 import DBMS from '../../assets/DBMS.png';
 import schema from '../../assets/schemaSQL.png';
+import doctorVideo from '../../assets/doctor.mp4';
+import receptionistVideo from '../../assets/Receptionist.mp4';
+import adminVideo from '../../assets/admin_compressed.mp4';
 
 const UrgentCare = () => {
   return (
@@ -103,14 +104,32 @@ const UrgentCare = () => {
         </section>
 
 
-        <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '35px', paddingLeft: '45px', paddingRight: '45px', marginTop: '40px' }}>
-          <figure style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', width: '40%', margin: 0 }}>
-            <img src={front} alt="front" style={{ width: '100%', borderRadius: '12px', display: 'block' }} />
-            <figcaption className="caption">NPC Front</figcaption>
+        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '35px', paddingLeft: '45px', paddingRight: '45px', marginTop: '40px' }}>
+          <figure style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', width: '50%', margin: 0 }}>
+            <video 
+              src={doctorVideo} 
+              controls
+              style={{ width: '100%', borderRadius: '12px', display: 'block' }}
+            />
+            <figcaption className="caption">Doctor Role Demo</figcaption>
           </figure>
-          <figure style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', width: '40%', margin: 0 }}>
-            <img src={side} alt="side" style={{ width: '100%', borderRadius: '12px', display: 'block' }} />
-            <figcaption className="caption">NPC Side</figcaption>
+          
+          <figure style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', width: '50%', margin: 0 }}>
+            <video 
+              src={receptionistVideo} 
+              controls
+              style={{ width: '100%', borderRadius: '12px', display: 'block' }}
+            />
+            <figcaption className="caption">Receptionist Role Demo</figcaption>
+          </figure>
+          
+          <figure style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', width: '50%', margin: 0 }}>
+            <video 
+              src={adminVideo} 
+              controls
+              style={{ width: '100%', borderRadius: '12px', display: 'block' }}
+            />
+            <figcaption className="caption">Admin Role Demo</figcaption>
           </figure>
         </div>
 
