@@ -56,7 +56,7 @@
 
 .project-card {
   background-color: #dadada;
-  border: 3px solid #646464;
+  border: 2px solid #7e7e7e1c;
   border-radius: 20px;
   padding: 1.5rem 2.5rem 2.5rem 2.5rem;
   width: 95%;
@@ -188,4 +188,18 @@
 .overlay-icon {
   font-size: 2.5rem;
   color: #cccccc;
+}
+
+
+/*reformat this....*/ 
+.project-code-block {
+  background-color: #2e2e2e; 
+  color: #ffffff;           
+  font-size: 0.9rem;
+  padding: 1rem;
+  border-radius: 12px;
+  overflow-x: auto;         
+  margin: 20px 0;           
+  line-height: 1.4;
+  box-shadow: inset 0 0 5px rgba(0,0,0,0.5);
 }
