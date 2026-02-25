@@ -95,6 +95,9 @@ const Portfolio = () => {
             </figure>
           </div>
 
+          <p>
+            Finally, I used Spline's code export for React.js to implement the 3D scene and CSS for styling.
+          </p>
         </section>
 
         <section className="text-content">
