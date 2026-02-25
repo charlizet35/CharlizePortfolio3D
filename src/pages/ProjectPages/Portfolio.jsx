@@ -1,13 +1,11 @@
 import React from 'react';
 import "../../App.css";
 import homepageGif from '../../assets/homepage_wave_example.gif';
-
-
-import HomePageDemo from '../../assets/HomePageDemo.gif';
-import image1 from '../../assets/image1.png';
-import image2 from '../../assets/image2.png';
-import DBMS from '../../assets/DBMS.png';
-import schema from '../../assets/schemaSQL.png';
+import moodBoard from '../../assets/Moodboard.png';
+import wireframe from '../../assets/AboutMeLofiWireframe.png';
+import rig from '../../assets/rig.gif';
+import wip1 from '../../assets/white_projects_page.png';
+import wip2 from '../../assets/WIPOutlineVideo.gif';
 import doctorVideo from '../../assets/doctor.mp4';
 import receptionistVideo from '../../assets/Receptionist.mp4';
 import adminVideo from '../../assets/admin_compressed.mp4';
@@ -19,7 +17,7 @@ const Portfolio = () => {
         
         <header>
           <h1 style={{fontSize: '3.5rem'}}>Portfolio App</h1>
-          <p className="project-date">A 2 month project, Jan 2026</p>
+          <p className="project-date">A 1 month project, Jan 2026</p>
 
           <figure className="image-hover-container" style={{ margin: 0, marginTop: '15px' }}>
             <img 
@@ -61,77 +59,53 @@ const Portfolio = () => {
             My inspiration first came from the NPC models I created for my game, Michelin Maihem. Having already rigged them, I realized I could create simple yet interesting animations that could follow small user interactions but wouldn't affect overall site performance.   
           </p>
           <p>
-            
+            I drew inspiration from multiple sources, most notably the font and gray gradient from Nintendo's Wii interface, Toro Inoue (Sony's official mascot), and Chiikawa.  
           </p>
         
-          <p>
-            Relational Models: 
-          </p>
           <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '35px', paddingLeft: '45px', paddingRight: '45px', marginTop: '20px' }}>
             <figure style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', width: '40%', margin: 0 }}>
-              <img src={image1} alt="Relational Schema 1" style={{ width: '100%', borderRadius: '12px', display: 'block' }} />
-              <figcaption className="caption">Smaller Scope</figcaption>
-            </figure>
-            <figure style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', width: '40%', margin: 0 }}>
-              <img src={image2} alt="Relational Schema 2" style={{ width: '100%', borderRadius: '12px', display: 'block' }} />
-              <figcaption className="caption">Larger Scope</figcaption>
+              <img src={moodBoard} alt="Moodboard" style={{ width: '200%', borderRadius: '12px', display: 'block' }} />
+              <figcaption className="caption">Moodboard</figcaption>
             </figure>
           </div>
-
-          <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '35px', paddingLeft: '45px', paddingRight: '45px', marginTop: '20px' }}>
-            <figure style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', width: '40%', margin: 0 }}>
-              <img src={schema} alt="Database Schema" style={{ width: '100%', borderRadius: '12px', display: 'block' }} />
-              <figcaption className="caption">Database Schema SQL Snippet</figcaption>
-            </figure>
-          </div>
-
           <p> 
-            After designing our database schema, we implemented it in MySQL and built a Node.js backend to handle API requests and queries. We secured protected routes using JWT access tokens and tested all endpoints with Postman to ensure correct functionality in tandem with frontend development. The backend was designed to integrate with cloud services like Azure, though deployment was handled by the team.
+            I then sketched out some rough outlines for the layout of each page on paper, and used Framer to design the low fidelity wireframe. 
           </p>
           <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '35px', paddingLeft: '45px', paddingRight: '45px', marginTop: '20px' }}>
             <figure style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', width: '93%', margin: 0 }}>
-              <img src={DBMS} alt="Database Schema" style={{ width: '100%', borderRadius: '12px', display: 'block' }} />
-              <figcaption className="caption">MySQL Workbench with Appointments Table</figcaption>
+              <img src={wireframe} alt="About Me Lofi Wireframe" style={{ width: '50%', borderRadius: '12px', display: 'block' }} />
+              <figcaption className="caption">Lo-fi Wireframe for AboutMe Page</figcaption>
             </figure>
           </div>
+          <p>
+            My character was originally modeled and rigged in Blender, but I chose to animate some momevements and poses to be triggered by user interactions in Spline. 
+          </p>
+          <p>
+            Although I had an idea of the aesthetic I wanted to achieve, I had to experiment with different types shaders and materials before deciding on the final look. However, I chose to minimize the textures but used a few of Spline's built in shaders such as their outline shader (inverse hull) and toon shader to emulate the low-poly minimal grey gradient aesthetic.
+          </p>
+          <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '35px', paddingLeft: '45px', paddingRight: '45px', marginTop: '20px' }}>
+            <figure style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', width: '40%', margin: 0 }}>
+              <img src={rig} alt="Model rig" style={{ width: '100%', borderRadius: '12px', display: 'block' }} />
+              <figcaption className="caption">Model Rig</figcaption>
+            </figure>
+            <figure style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', width: '40%', margin: 0 }}>
+              <img src={wip1} alt="Projects Page Model WIP" style={{ width: '100%', borderRadius: '12px', display: 'block' }} />
+              <figcaption className="caption">Projects Page Work in Progress</figcaption>
+            </figure>
+            <figure style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', width: '40%', margin: 0 }}>
+              <img src={wip2} alt="Projects Page Model WIP" style={{ width: '100%', borderRadius: '12px', display: 'block' }} />
+              <figcaption className="caption">Home Page Work in Progress</figcaption>
+            </figure>
+          </div>
+
         </section>
 
         <section className="text-content">
           <h3>03 Result</h3>
           <p> 
-            Below are a few videos of the final application separated by roles.
+            Although I had some challenges implementing Spline with React, I am happy to have brought my vision to life. It was a good opportunity for me to experiment with new tools and workflows to develop a website that combines my creativity and technical skills. I hope you enjoyed interacting with my portfolio!
           </p>
         </section>
-
-
-        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '35px', paddingLeft: '45px', paddingRight: '45px', marginTop: '40px' }}>
-          <figure style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', width: '50%', margin: 0 }}>
-            <video 
-              src={doctorVideo} 
-              controls
-              style={{ width: '100%', borderRadius: '12px', display: 'block' }}
-            />
-            <figcaption className="caption">Doctor Role Demo</figcaption>
-          </figure>
-          
-          <figure style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', width: '50%', margin: 0 }}>
-            <video 
-              src={receptionistVideo} 
-              controls
-              style={{ width: '100%', borderRadius: '12px', display: 'block' }}
-            />
-            <figcaption className="caption">Receptionist Role Demo</figcaption>
-          </figure>
-          
-          <figure style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', width: '50%', margin: 0 }}>
-            <video 
-              src={adminVideo} 
-              controls
-              style={{ width: '100%', borderRadius: '12px', display: 'block' }}
-            />
-            <figcaption className="caption">Admin Role Demo</figcaption>
-          </figure>
-        </div>
 
       </article>
     </div>
