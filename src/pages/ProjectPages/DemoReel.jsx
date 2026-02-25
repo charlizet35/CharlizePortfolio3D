@@ -7,7 +7,7 @@ import rig from '../../assets/rig.gif';
 import wip1 from '../../assets/white_projects_page.png';
 import wip2 from '../../assets/WIPOutlineVideo.gif';
 
-const Portfolio = () => {
+const DemoReel = () => {
   return (
     <div className="gradient-background">
       <article className="project-card">
@@ -24,13 +24,13 @@ const Portfolio = () => {
               style={{ width: '100%', maxWidth: '500px', height: 'auto'}}
             />
             <a 
-              href="https://github.com/charlizet35/CharlizePortfolio3D" 
+              href="https://vimeo.com/1160704097?share=copy&fl=sv&fe=ci" 
               target="_blank" 
               rel="noopener noreferrer"
               className="image-overlay-link"
             >
               <span className="overlay-icon">↗</span>
-              <span style={{ color: '#cccccc' }}>View Code</span>
+              <span style={{ color: '#cccccc' }}>View on Vimeo</span>
             </a>
           </figure>
           
@@ -109,4 +109,4 @@ const Portfolio = () => {
   );
 };
 
-export default Portfolio;
+export default DemoReel;
