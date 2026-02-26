@@ -70,6 +70,7 @@ const AboutMe = () => {
         }}
       >
         
+        {/*
         <div style={{
         position: 'absolute',
         bottom: 20,
@@ -79,6 +80,8 @@ const AboutMe = () => {
         backgroundColor: 'white',
         pointerEvents: 'none'
         }} />
+
+        */}
       </div>
     </div>
   );

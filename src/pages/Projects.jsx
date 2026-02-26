@@ -142,6 +142,7 @@ const Projects = () => {
         }}
       >
 
+        {/*
         <div style={{
         position: 'absolute',
         bottom: 20,
@@ -151,6 +152,7 @@ const Projects = () => {
         backgroundColor: '#f0f0f0',
         pointerEvents: 'none'
         }} />
+         */}
       </div>
     </div>
   );

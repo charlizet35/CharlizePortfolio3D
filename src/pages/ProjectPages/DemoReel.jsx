@@ -39,7 +39,7 @@ const DemoReel = () => {
         <section className="text-content">
           <h3>01 Description</h3>
           <p> 
-            This demo reel is a collection of my recent work across 3D design, game development, and technical tools. It includes environment and asset work, gameplay systems, and custom Maya tools buil to streamline workflows.
+            This demo reel is a collection of my recent work across 3D design, game development, and technical tools. It includes environment and asset work, gameplay systems, and custom Maya tools buil to streamline workflows. I created and edited this using DaVinci Resolve.
           </p>
         </section>
 

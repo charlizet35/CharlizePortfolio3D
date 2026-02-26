@@ -96,7 +96,7 @@ const Portfolio = () => {
           </div>
 
           <p>
-            Finally, I used Spline's code export for React.js to implement the 3D scene and CSS for styling.
+            Finally, I used Spline's code export for React.js to implement the 3D scene and CSS for styling. The icons were created with a combination of using Framer's vector editing tool and taking screenshots of my models and using Adobe Express to convert them into SVGs.
           </p>
         </section>
 

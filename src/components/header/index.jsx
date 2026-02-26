@@ -5,7 +5,7 @@ import AboutMeIcon from '../../assets/AboutMe.svg';
 import ExperienceIcon from '../../assets/Experience.svg';
 import ProjectsIcon from '../../assets/Projects.svg';
 
-const s = (px) => `clamp(${px * 0.4}px, ${(px / 1440) * 100}vw, ${px}px)`;
+const s = (px) => `clamp(${px * 0.7}px, ${(px / 1440) * 100}vw, ${px }px)`;
 
 const Header = () => {
     const navigate = useNavigate();
@@ -36,6 +36,7 @@ const Header = () => {
     const labelStyle = {
         fontFamily: 'Contb',
         position: 'absolute',
+        top: '110%',
         bottom: `calc(${s(-20)} - 2px)`,
         fontSize: s(12),
         letterSpacing: '1px',

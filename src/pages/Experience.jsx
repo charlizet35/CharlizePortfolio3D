@@ -69,6 +69,7 @@ const Experience = () => {
         }}
       >
         
+        {/*
         <div style={{
         position: 'absolute',
         bottom: 20,
@@ -78,6 +79,7 @@ const Experience = () => {
         backgroundColor: 'white',
         pointerEvents: 'none'
         }} />
+         */}
       </div>
     </div>
   );

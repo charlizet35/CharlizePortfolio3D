@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 import Spline from '@splinetool/react-spline';
 import Typewriter from 'typewriter-effect';
 
+const s = (px) => `clamp(${px * 0.415}px, ${(px / 1440) * 100}vw, ${px }px)`;
+
 const Home = () => {
   const [sceneReady, setSceneReady] = useState(false);
   const [showUI, setShowUI] = useState(false);
@@ -70,6 +72,7 @@ const Home = () => {
         }}
       >
 
+        {/* 
         <div
           style={{
             position: 'absolute',
@@ -81,21 +84,22 @@ const Home = () => {
             pointerEvents: 'none',
           }}
         />
+        */}
 
         {/* left text */}
         <div
           style={{
             position: 'absolute',
-            left: '120px',
+            left: s(120),
             top: '50%',
             transform: 'translateY(-55%)',
-            maxWidth: '350px',
+            maxWidth: s(350),
             color: 'gray',
             textAlign: 'left',
             pointerEvents: 'none',
           }}
         >
-          <h1 style={{fontSize: '6rem', margin: '0 0 1rem 0', lineHeight: 1}}>
+          <h1 style={{fontSize: s(96), margin: `0 0 ${s(16)} 0`, lineHeight: 1}}>
             <Typewriter
               onInit={(tw) => {
                 tw.typeString("Hi, I'm Charlize").start();
@@ -103,7 +107,7 @@ const Home = () => {
               options={{ delay: 75, cursor: '' }}
             />
           </h1>
-          <h2 style={{fontSize: '2rem', margin: '0 0 1rem 0', lineHeight: 1}}>
+          <h2 style={{fontSize: s(32), margin: `0 0 ${s(16)} 0`, lineHeight: 1}}>
             <Typewriter
               onInit={(tw) => {
                 tw.typeString(
@@ -119,16 +123,16 @@ const Home = () => {
         <div
           style={{
             position: 'absolute',
-            right: '120px',
+            right: s(120),
             top: '50%',
             transform: 'translateY(-55%)',
-            maxWidth: '350px',
+            maxWidth: s(350),
             color: 'gray',
             textAlign: 'right',
             pointerEvents: 'none',
           }}
         >
-          <h2 style={{fontSize: '2rem', margin: '0 0 1rem 0', lineHeight: 1}}>
+          <h2 style={{fontSize: s(32), margin: `0 0 ${s(16)} 0`, lineHeight: 1}}>
             <Typewriter
               onInit={(tw) => {
                 tw.typeString(
@@ -139,7 +143,7 @@ const Home = () => {
             />
           </h2>
 
-          <h3 style={{fontSize: '1.3rem', margin: '0 0 1rem 0', lineHeight: 1}}>
+          <h3 style={{fontSize: s(20), margin: `0 0 ${s(16)} 0`, lineHeight: 1}}>
             <Typewriter
               onInit={(tw) => {
                 tw.typeString(
