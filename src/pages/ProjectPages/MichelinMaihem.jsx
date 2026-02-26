@@ -62,7 +62,7 @@ const MichelinMaihem = () => {
         <section className="text-content">
           <h3>02 Process</h3>
           <p>
-            I was primarily responsible for designing and building the 3D level layouts and start screen including lighting and post processing, although Alan provided the initial sketch layout. I also designed and created the NPCs with Blender, implemented them using Unity's AI Navmesh system, and was a developer for various gameplay features.
+            I was primarily responsible for designing and building the 3D level layouts and start screen including lighting and post processing, although Alan provided the initial sketch layout. I also designed and created the NPCs with Blender, implemented them using Unity's AI Navmesh system, and was a developer for various gameplay features such as the ordering system.
           </p>
           <p> 
             Levels in progress:
