@@ -84,7 +84,6 @@ const Home = () => {
             pointerEvents: 'none',
           }}
         />
-        */}
 
         {/* left text */}
         <div
