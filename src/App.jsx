@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-route
 import { useEffect, useState, createContext, useContext, useRef } from 'react';
 import Spline from '@splinetool/react-spline';
 import Header from './components/header';
+import Footer from './components/footer';
 import Home from './pages/Home';
 import AboutMe from './pages/AboutMe';
 import Experience from './pages/Experience';
@@ -65,7 +66,7 @@ function AppInner() {
           <Header />
         </div>
 
-        <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', zIndex: 1 }}>
+        <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', minHeight: '100%', zIndex: 1 }}>
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<AboutMe />} />
@@ -76,6 +77,9 @@ function AppInner() {
             <Route path="/Portfolio" element={<Portfolio />} />
             <Route path="/DemoReel" element={<DemoReel />} />
           </Routes>
+          <div style={{ position: 'absolute', bottom: 0, width: '100%', zIndex: 50 }}>
+            <Footer />
+          </div>
         </div>
       </div>
       <Analytics />

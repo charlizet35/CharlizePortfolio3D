@@ -8,6 +8,8 @@
 .App {
   width: 100%;
   min-height: 100vh;
+  display: block;
+  position: relative;
 }
 
 .logo {
