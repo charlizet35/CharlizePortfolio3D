@@ -1,20 +1,19 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useContext } from 'react';
 import Spline from '@splinetool/react-spline';
 import Typewriter from 'typewriter-effect';
+import { SceneContext } from '../App';
 
-const s = (px) => `clamp(${px * 0.415}px, ${(px / 1440) * 100}vw, ${px }px)`;
+const s = (px) => `clamp(${px * 0.415}px, ${(px / 1440) * 100}vw, ${px}px)`;
 
 const Home = () => {
   const [sceneReady, setSceneReady] = useState(false);
   const [showUI, setShowUI] = useState(false);
   const [showLoader, setShowLoader] = useState(false);
-
-  //show loader if load > 2s
+  const { setSceneReady: setGlobalReady } = useContext(SceneContext); 
   useEffect(() => {
     const loaderTimer = setTimeout(() => {
       setShowLoader(true);
     }, 2000);
-
     return () => clearTimeout(loaderTimer);
   }, []);
 
@@ -29,130 +28,87 @@ const Home = () => {
           transition: 'opacity 0.8s ease',
         }}
         onLoad={() => {
-          // let shaders + animation settle
           setTimeout(() => {
             setSceneReady(true);
             setShowLoader(false);
-            setTimeout(() => setShowUI(true), 600);
+            setTimeout(() => {
+              setShowUI(true);
+              setGlobalReady(true); 
+            }, 600);
           }, 400);
         }}
       />
 
       {/* loader */}
       {showLoader && !sceneReady && (
-        <div
-          style={{
-            position: 'absolute',
-            inset: 0,
-            background: 'linear-gradient(180deg, #f5f5f5, #eaeaea)',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            zIndex: 40,
-          }}
-        >
-          <p
-            style={{
-              fontSize: '1.1rem',
-              letterSpacing: '0.12em',
-              color: '#777',
-            }}
-          >
+        <div style={{
+          position: 'absolute', inset: 0,
+          background: 'linear-gradient(180deg, #f5f5f5, #eaeaea)',
+          display: 'flex', alignItems: 'center', justifyContent: 'center', zIndex: 40,
+        }}>
+          <p style={{ fontSize: '1.1rem', letterSpacing: '0.12em', color: '#777' }}>
             Loading experience…
           </p>
         </div>
       )}
 
       {/* gated ui/text */}
-      <div
-        style={{
-          opacity: showUI ? 1 : 0,
-          visibility: showUI ? 'visible' : 'hidden',
-          transition: 'opacity 0.8s ease',
-        }}
-      >
-
-        {/* 
-        <div
-          style={{
-            position: 'absolute',
-            bottom: 20,
-            right: 5,
-            width: 180,
-            height: 39,
-            backgroundColor: 'white',
-            pointerEvents: 'none',
-          }}
-        />
+      <div style={{
+        opacity: showUI ? 1 : 0,
+        visibility: showUI ? 'visible' : 'hidden',
+        transition: 'opacity 0.8s ease',
+      }}>
 
         {/* left text */}
-        <div
-          style={{
-            position: 'absolute',
-            left: s(120),
-            top: '50%',
-            transform: 'translateY(-55%)',
-            maxWidth: s(350),
-            color: 'gray',
-            textAlign: 'left',
-            pointerEvents: 'none',
-          }}
-        >
-          <h1 style={{fontSize: s(96), margin: `0 0 ${s(16)} 0`, lineHeight: 1}}>
+        <div style={{
+          position: 'absolute',
+          left: s(120),
+          top: '50%',
+          transform: 'translateY(-55%)',
+          maxWidth: s(350),
+          color: 'gray',
+          textAlign: 'left',
+          pointerEvents: 'none',
+        }}>
+          <h1 style={{ fontSize: s(96), margin: `0 0 ${s(16)} 0`, lineHeight: 1 }}>
             <Typewriter
-              onInit={(tw) => {
-                tw.typeString("Hi, I'm Charlize").start();
-              }}
+              onInit={(tw) => { tw.typeString("Hi, I'm Charlize").start(); }}
               options={{ delay: 75, cursor: '' }}
             />
           </h1>
-          <h2 style={{fontSize: s(32), margin: `0 0 ${s(16)} 0`, lineHeight: 1}}>
+          <h2 style={{ fontSize: s(32), margin: `0 0 ${s(16)} 0`, lineHeight: 1 }}>
             <Typewriter
-              onInit={(tw) => {
-                tw.typeString(
-                  'Fullstack Developer / 3D Creative Technologist'
-                ).start();
-              }}
+              onInit={(tw) => { tw.typeString('Fullstack Developer / 3D Creative Technologist').start(); }}
               options={{ delay: 60, cursor: '' }}
             />
           </h2>
         </div>
 
         {/* right text */}
-        <div
-          style={{
-            position: 'absolute',
-            right: s(120),
-            top: '50%',
-            transform: 'translateY(-55%)',
-            maxWidth: s(350),
-            color: 'gray',
-            textAlign: 'right',
-            pointerEvents: 'none',
-          }}
-        >
-          <h2 style={{fontSize: s(32), margin: `0 0 ${s(16)} 0`, lineHeight: 1}}>
+        <div style={{
+          position: 'absolute',
+          right: s(120),
+          top: '50%',
+          transform: 'translateY(-55%)',
+          maxWidth: s(350),
+          color: 'gray',
+          textAlign: 'right',
+          pointerEvents: 'none',
+        }}>
+          <h2 style={{ fontSize: s(32), margin: `0 0 ${s(16)} 0`, lineHeight: 1 }}>
             <Typewriter
-              onInit={(tw) => {
-                tw.typeString(
-                  'Building interactive 3D experiences through code, tools, and design'
-                ).start();
-              }}
+              onInit={(tw) => { tw.typeString('Building interactive 3D experiences through code, tools, and design').start(); }}
               options={{ delay: 45, cursor: '' }}
             />
           </h2>
-
-          <h3 style={{fontSize: s(20), margin: `0 0 ${s(16)} 0`, lineHeight: 1}}>
+          <h3 style={{ fontSize: s(20), margin: `0 0 ${s(16)} 0`, lineHeight: 1 }}>
             <Typewriter
-              onInit={(tw) => {
-                tw.typeString(
-                  'Hover around the screen and interact with the model. Explore my portfolio through the navigation icons above :3'
-                ).start();
-              }}
+              onInit={(tw) => { tw.typeString('Hover around the screen and interact with the model. Explore my portfolio through the navigation icons above :3').start(); }}
               options={{ delay: 25, cursor: '' }}
             />
           </h3>
         </div>
+
       </div>
     </div>
   );
