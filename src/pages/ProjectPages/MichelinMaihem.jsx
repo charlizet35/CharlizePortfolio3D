@@ -10,8 +10,13 @@ import front from '../../assets/npc_front.png';
 import side from '../../assets/npc_side.png';
 import back from '../../assets/npc_back.png';
 import walk from '../../assets/npc_walk.png';
+import { useEffect, useContext} from 'react';
+import { SceneContext } from '../../App';
 
 const MichelinMaihem = () => {
+  const { setSceneReady: setGlobalReady } = useContext(SceneContext);
+  useEffect(() => { setGlobalReady(true); }, []);
+  
   return (
     <div className="gradient-background">
       <article className="project-card">

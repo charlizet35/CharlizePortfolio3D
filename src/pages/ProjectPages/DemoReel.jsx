@@ -2,8 +2,13 @@ import React from 'react';
 import "../../App.css";
 import reelScreenShot from '../../assets/ReelScreenShot.png';
 import demoReel from '../../assets/Demo Reel 2026.mov';
+import { useEffect, useContext} from 'react';
+import { SceneContext } from '../../App';
 
 const DemoReel = () => {
+  const { setSceneReady: setGlobalReady } = useContext(SceneContext);
+  useEffect(() => { setGlobalReady(true); }, []);
+
   return (
     <div className="gradient-background">
       <article className="project-card">

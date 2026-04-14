@@ -6,8 +6,13 @@ import wireframe from '../../assets/AboutMeLofiWireframe.png';
 import rig from '../../assets/rig.gif';
 import wip1 from '../../assets/white_projects_page.png';
 import wip2 from '../../assets/WIPOutlineVideo.gif';
+import { useEffect, useContext} from 'react';
+import { SceneContext } from '../../App';
 
 const Portfolio = () => {
+  const { setSceneReady: setGlobalReady } = useContext(SceneContext);
+  useEffect(() => { setGlobalReady(true); }, []);
+
   return (
     <div className="gradient-background">
       <article className="project-card">

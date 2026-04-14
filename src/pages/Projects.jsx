@@ -10,9 +10,10 @@ const Projects = () => {
     const [showLoader, setShowLoader] = useState(false);
     const [splineApp, setSplineApp] = useState(null);
     const navigate = useNavigate();
-    const { setSceneReady: setGlobalReady } = useContext(SceneContext); 
+    const { setSceneReady: setGlobalReady, hasLoadedOnce } = useContext(SceneContext); 
 
     useEffect(() => {
+      if (hasLoadedOnce.current) return;
       const loaderTimer = setTimeout(() => {
           setShowLoader(true);
       }, 2000);
@@ -35,6 +36,7 @@ const Projects = () => {
       setTimeout(() => {
         setSceneReady(true);
         setShowLoader(false);
+        hasLoadedOnce.current = true;
         setTimeout(() => {
           setShowUI(true);
           setGlobalReady(true); 

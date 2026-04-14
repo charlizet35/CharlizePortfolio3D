@@ -8,8 +8,13 @@ import schema from '../../assets/schemaSQL.png';
 import doctorVideo from '../../assets/doctor.mp4';
 import receptionistVideo from '../../assets/Receptionist.mp4';
 import adminVideo from '../../assets/admin_compressed.mp4';
+import { useEffect, useContext} from 'react';
+import { SceneContext } from '../../App';
 
 const UrgentCare = () => {
+  const { setSceneReady: setGlobalReady } = useContext(SceneContext);
+  useEffect(() => { setGlobalReady(true); }, []);
+  
   return (
     <div className="gradient-background">
       <article className="project-card">

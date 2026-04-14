@@ -9,9 +9,10 @@ const Home = () => {
   const [sceneReady, setSceneReady] = useState(false);
   const [showUI, setShowUI] = useState(false);
   const [showLoader, setShowLoader] = useState(false);
-  const { setSceneReady: setGlobalReady } = useContext(SceneContext); 
+  const { setSceneReady: setGlobalReady, hasLoadedOnce } = useContext(SceneContext);
   useEffect(() => {
     const loaderTimer = setTimeout(() => {
+      if (hasLoadedOnce.current) return;
       setShowLoader(true);
     }, 2000);
     return () => clearTimeout(loaderTimer);
@@ -31,6 +32,7 @@ const Home = () => {
           setTimeout(() => {
             setSceneReady(true);
             setShowLoader(false);
+            hasLoadedOnce.current = true;
             setTimeout(() => {
               setShowUI(true);
               setGlobalReady(true); 

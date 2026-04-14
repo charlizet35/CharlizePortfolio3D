@@ -1,6 +1,6 @@
 import './App.css';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
-import { useEffect, useState, createContext, useContext } from 'react';
+import { useEffect, useState, createContext, useContext, useRef } from 'react';
 import Spline from '@splinetool/react-spline';
 import Header from './components/header';
 import Home from './pages/Home';
@@ -42,15 +42,15 @@ function LocationLogger() {
 
 function AppInner() {
   const [sceneReady, setSceneReady] = useState(false);
+  const hasLoadedOnce = useRef(false);
   const location = useLocation();
 
-  // Reset sceneReady to false on every route change so header fades out between pages
   useEffect(() => {
     setSceneReady(false);
   }, [location.pathname]);
 
   return (
-    <SceneContext.Provider value={{ sceneReady, setSceneReady }}>
+    <SceneContext.Provider value={{ sceneReady, setSceneReady, hasLoadedOnce }}>
       <LocationLogger />
       <SplinePreloader />
       <div className="App" style={{ position: 'relative', width: '100%', height: '100vh', margin: 0, padding: 0 }}>

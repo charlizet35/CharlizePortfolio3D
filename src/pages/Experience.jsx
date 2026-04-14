@@ -5,9 +5,10 @@ import { SceneContext } from '../App';
 const Experience = () => {
     const [sceneReady, setSceneReady] = useState(false);
     const [showLoader, setShowLoader] = useState(false);
-    const { setSceneReady: setGlobalReady } = useContext(SceneContext);
+    const { setSceneReady: setGlobalReady, hasLoadedOnce } = useContext(SceneContext);
 
     useEffect(() => {
+        if (hasLoadedOnce.current) return; 
         const loaderTimer = setTimeout(() => {
             setShowLoader(true);
         }, 2000);
@@ -28,6 +29,7 @@ const Experience = () => {
           setTimeout(() => {
             setSceneReady(true);
             setShowLoader(false);
+            hasLoadedOnce.current = true;
             setTimeout(() => setGlobalReady(true), 200);
           }, 200);
         }}
