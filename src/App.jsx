@@ -12,6 +12,7 @@ import MichelinMaihem from './pages/ProjectPages/MichelinMaihem';
 import UrgentCare from './pages/ProjectPages/UrgentCare';
 import Portfolio from './pages/ProjectPages/Portfolio';
 import DemoReel from './pages/ProjectPages/DemoReel';
+import Aurora from './pages/ProjectPages/Aurora';
 import { Analytics } from '@vercel/analytics/react';
 
 export const SceneContext = createContext(null);
@@ -76,6 +77,7 @@ function AppInner() {
             <Route path="/UrgentCare" element={<UrgentCare />} />
             <Route path="/Portfolio" element={<Portfolio />} />
             <Route path="/DemoReel" element={<DemoReel />} />
+            <Route path="/Aurora" element={<Aurora />} />
           </Routes>
           <div style={{ position: 'absolute', bottom: 0, width: '100%', zIndex: 50 }}>
             <Footer />

@@ -62,6 +62,9 @@ const Projects = () => {
       else if (e.target && e.target.name === 'Rectangle4') {
         navigate('/DemoReel');
       }
+      else if (e.target && e.target.name === 'Rectangle5') {
+        navigate('/Aurora');
+      }
     }
 
   return (
