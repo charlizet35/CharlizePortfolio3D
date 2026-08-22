@@ -2,23 +2,33 @@
   width: 100%;
   min-height: 100vh;
   background-color: #eeedee;
-  padding: 80px 8vw;
+  padding: 60px 6vw;
   box-sizing: border-box;
 }
 
 .projects-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2.5rem;
+  max-width: 1400px;
+  margin: 0 auto;
 }
 
 .project-gallery-card {
+  flex: 1 1 calc(50% - 2.5rem);
+  min-width: 320px;            
+  min-height: 220px;             
   background-color: #ffffff;
-  border-radius: 16px;
-  padding: 2rem;
+  border-radius: 20px;
+  padding: 2.5rem;
+  box-sizing: border-box;
   cursor: pointer;
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
   transition: transform 0.25s ease, box-shadow 0.25s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .project-gallery-card:hover {
