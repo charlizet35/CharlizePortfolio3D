@@ -2,6 +2,7 @@ import React, { useEffect, useState, useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Spline from '@splinetool/react-spline';
 import { SceneContext } from '../App';
+import './ProjectCards.css';
 
 const projectsList = [
   { name: 'Michelin Mayhem', path: '/MichelinMaihem', description: 'A short project description goes here.' },
@@ -87,46 +88,16 @@ const Projects = () => {
         </div>
 
         {/* Project cards section */}
-        <div style={{
-          width: '100%',
-          minHeight: '100vh',
-          backgroundColor: 'rgb(240, 240, 240)',
-          padding: '80px 8vw',
-          boxSizing: 'border-box',
-        }}>
-
-          <div style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
-            gap: '2rem',
-          }}>
+        <div className="projects-gallery-section">
+          <div className="projects-grid">
             {projectsList.map((project) => (
               <div
                 key={project.path}
+                className="project-gallery-card"
                 onClick={() => navigate(project.path)}
-                style={{
-                  backgroundColor: '#ffffff',
-                  borderRadius: '16px',
-                  padding: '2rem',
-                  cursor: 'pointer',
-                  boxShadow: '0 2px 12px rgba(0,0,0,0.06)',
-                  transition: 'transform 0.25s ease, box-shadow 0.25s ease',
-                }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.transform = 'translateY(-6px)';
-                  e.currentTarget.style.boxShadow = '0 8px 24px rgba(0,0,0,0.1)';
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.transform = 'translateY(0)';
-                  e.currentTarget.style.boxShadow = '0 2px 12px rgba(0,0,0,0.06)';
-                }}
               >
-                <h3 style={{ fontFamily: 'Contb', fontSize: '1.3rem', color: '#222', marginBottom: '0.75rem' }}>
-                  {project.name}
-                </h3>
-                <p style={{ color: '#666', fontSize: '0.95rem', lineHeight: 1.5 }}>
-                  {project.description}
-                </p>
+                <h3>{project.name}</h3>
+                <p>{project.description}</p>
               </div>
             ))}
           </div>

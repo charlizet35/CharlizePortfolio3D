@@ -1,0 +1,41 @@
+.projects-gallery-section {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #eeedee;
+  padding: 80px 8vw;
+  box-sizing: border-box;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.project-gallery-card {
+  background-color: #ffffff;
+  border-radius: 16px;
+  padding: 2rem;
+  cursor: pointer;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.project-gallery-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+.project-gallery-card h3 {
+  font-family: 'Contb', sans-serif;
+  font-size: 1.3rem;
+  color: #222222;
+  margin-bottom: 0.75rem;
+}
+
+.project-gallery-card p {
+  color: #666666;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin: 0;
+}
