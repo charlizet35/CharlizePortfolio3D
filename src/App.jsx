@@ -1,6 +1,6 @@
 import './App.css';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
-import { useEffect, useState, createContext, useContext, useRef } from 'react';
+import { useEffect, useLayoutEffect, useState, createContext, useContext, useRef } from 'react';
 import Spline from '@splinetool/react-spline';
 import Header from './components/header';
 import Footer from './components/footer';
@@ -48,14 +48,21 @@ function AppInner() {
   const location = useLocation();
 
   useEffect(() => {
+    if ('scrollRestoration' in window.history) {
+      window.history.scrollRestoration = 'manual';
+    }
+  }, []);
+
+  useLayoutEffect(() => {
     setSceneReady(false);
+    window.scrollTo(0, 0);
   }, [location.pathname]);
 
   return (
     <SceneContext.Provider value={{ sceneReady, setSceneReady, hasLoadedOnce }}>
       <LocationLogger />
       <SplinePreloader />
-      <div className="App" style={{ position: 'relative', width: '100%', height: '100vh', margin: 0, padding: 0 }}>
+      <div className="App" style={{ position: 'relative', width: '100%', minHeight: '100vh', margin: 0, padding: 0 }}>
 
         <div style={{
           position: 'relative',
