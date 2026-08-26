@@ -2,14 +2,14 @@ import React, { useEffect, useState, useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Spline from '@splinetool/react-spline';
 import { SceneContext } from '../App';
+import Footer from '../components/Footer';
 import './ProjectCards.css';
 
 const projectsList = [
-  { name: 'Michelin Mayhem', path: '/MichelinMaihem', description: 'A short project description goes here.' },
-  { name: 'Urgent Care Management System', path: '/UrgentCare', description: 'A short project description goes here.' },
-  { name: '3D Portfolio Website', path: '/Portfolio', description: 'A short project description goes here.' },
-  { name: 'Demo Reel', path: '/DemoReel', description: 'A short project description goes here.' },
-  { name: 'Aurora Borealis Tool', path: '/Aurora', description: 'A short project description goes here.' },
+  { name: 'Urgent Care Management System', path: '/UrgentCare', description: 'A short project description goes here.', tech: 'asdfasdf', image: '' },
+  { name: '3D Portfolio Website', path: '/Portfolio', description: 'A short project description goes here.', tech: 'asdfasdf', image: '' },
+  { name: 'Demo Reel', path: '/DemoReel', description: 'A short project description goes here.', tech: 'asdfasdf', image: '' },
+  { name: 'Aurora Borealis Tool', path: '/Aurora', description: 'A short project description goes here.', tech: 'asdfasdf', image: '' },
 ];
 
 const Projects = () => {
@@ -49,7 +49,7 @@ const Projects = () => {
     }
 
   return (
-    <div style={{ width: '100%', backgroundColor: '#777)', position: 'relative' }}>
+    <div style={{ width: '100%', backgroundColor: '#777', position: 'relative' }}>
 
       {showLoader && !sceneReady && (
         <div style={{
@@ -74,7 +74,6 @@ const Projects = () => {
         }}
       >
 
-        {/* Hero: full-screen Spline scene */}
         <div style={{ position: 'relative', width: '100%', height: '100vh', maxHeight: '800px',overflow: 'hidden', backgroundColor: 'rgb(240, 240, 240)' }}>
           <Spline
             scene="https://prod.spline.design/Hbtm1NoPMbDZlWqe/scene.splinecode"
@@ -87,21 +86,32 @@ const Projects = () => {
           />
         </div>
 
-        {/* Project cards section */}
         <div className="projects-gallery-section">
           <div className="projects-grid">
             {projectsList.map((project) => (
               <div
                 key={project.path}
-                className="project-gallery-card"
+                className="project-console-card" 
                 onClick={() => navigate(project.path)}
               >
-                <h3>{project.name}</h3>
-                <p>{project.description}</p>
+                <h3 className="console-title">{project.name}</h3>
+                <p className="console-subtitle">{project.description}</p>
+
+                <div className="console-screen-frame">
+                  {project.image ? (
+                    <img src={project.image} alt={project.name} className="console-screen-img" />
+                  ) : (
+                    <div className="console-screen-placeholder">
+                      <span>Preview Image Placeholder</span>
+                    </div>
+                  )}
+                </div>
+                <span className="console-footer-tech">{project.tech}</span>
               </div>
             ))}
           </div>
         </div>
+
       </div>
     </div>
   );
