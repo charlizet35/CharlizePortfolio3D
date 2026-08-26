@@ -2,7 +2,7 @@ import React, { useEffect, useState, useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Spline from '@splinetool/react-spline';
 import { SceneContext } from '../App';
-import Footer from '../components/Footer';
+import Footer from '../components/footer/index.jsx';
 import './ProjectCards.css';
 
 import urgentCareImg from '../assets/Clinic_Pic.png';
