@@ -2,7 +2,6 @@ import React, { useEffect, useState, useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Spline from '@splinetool/react-spline';
 import { SceneContext } from '../App';
-import Footer from '../components/footer/index.jsx';
 import './ProjectCards.css';
 
 import urgentCareImg from '../assets/Clinic_Pic.png';
@@ -18,40 +17,50 @@ const projectsList = [
 ];
 
 const Projects = () => {
-    const [sceneReady, setSceneReady] = useState(false);
-    const [showUI, setShowUI] = useState(false);
-    const [showLoader, setShowLoader] = useState(false);
-    const [splineApp, setSplineApp] = useState(null);
-    const navigate = useNavigate();
-    const { setSceneReady: setGlobalReady, hasLoadedOnce } = useContext(SceneContext);
+  const [sceneReady, setSceneReady] = useState(false);
+  const [showUI, setShowUI] = useState(false);
+  const [showLoader, setShowLoader] = useState(false);
+  const [splineApp, setSplineApp] = useState(null);
+  const navigate = useNavigate();
+  const { setSceneReady: setGlobalReady, hasLoadedOnce } = useContext(SceneContext);
 
-    useEffect(() => {
-      if (hasLoadedOnce.current) return;
-      const loaderTimer = setTimeout(() => {
-          setShowLoader(true);
-      }, 2000);
+  useEffect(() => {
+    if (hasLoadedOnce.current) return;
+    const loaderTimer = setTimeout(() => {
+      setShowLoader(true);
+    }, 2000);
 
-      return () => clearTimeout(loaderTimer);
-    }, []);
+    return () => clearTimeout(loaderTimer);
+  }, []);
 
-    function onLoad(spline) {
-      setSplineApp(spline);
+  // Dedicated navigation handler checking both e.target and direct payload
+  const handleObjectClick = (e) => {
+    console.log('=== Spline Click Event ===', e);
+    const targetName = e?.target?.name || e?.name;
+    console.log('Target name detected:', targetName);
+
+    if (targetName === 'Rectangle1') {
+      navigate('/MichelinMaihem');
+    }
+  };
+
+  const onLoad = (spline) => {
+    setSplineApp(spline);
+
+    // Direct listener on the Spline runtime for both release and press
+    spline.addEventListener('mouseUp', handleObjectClick);
+    spline.addEventListener('mouseDown', handleObjectClick);
+
+    setTimeout(() => {
+      setSceneReady(true);
+      setShowLoader(false);
+      hasLoadedOnce.current = true;
       setTimeout(() => {
-        setSceneReady(true);
-        setShowLoader(false);
-        hasLoadedOnce.current = true;
-        setTimeout(() => {
-          setShowUI(true);
-          setGlobalReady(true);
-        }, 200);
+        setShowUI(true);
+        setGlobalReady(true);
       }, 200);
-    }
-
-    function onSplineMouseUp(e) {
-      if (e.target && e.target.name === 'Rectangle1') {
-        navigate('/MichelinMaihem');
-      }
-    }
+    }, 200);
+  };
 
   return (
     <div style={{ width: '100%', backgroundColor: '#777', position: 'relative' }}>
@@ -79,7 +88,7 @@ const Projects = () => {
         }}
       >
 
-        <div style={{ position: 'relative', width: '100%', height: '100vh', maxHeight: '800px',overflow: 'hidden', backgroundColor: 'rgb(240, 240, 240)' }}>
+        <div style={{ position: 'relative', width: '100%', height: '100vh', maxHeight: '800px', overflow: 'hidden', backgroundColor: 'rgb(240, 240, 240)' }}>
           <Spline
             scene="https://prod.spline.design/Hbtm1NoPMbDZlWqe/scene.splinecode"
             style={{
@@ -87,7 +96,7 @@ const Projects = () => {
               height: '100%',
             }}
             onLoad={onLoad}
-            onSplineMouseUp={onSplineMouseUp}
+            onSplineMouseDown={handleObjectClick}
           />
         </div>
 
