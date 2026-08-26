@@ -5,11 +5,16 @@ import { SceneContext } from '../App';
 import Footer from '../components/Footer';
 import './ProjectCards.css';
 
+import urgentCareImg from '../assets/Clinic_Pic.png';
+import portfolioImg from '../assets/homepage_wave_example.gif';
+import demoReelImg from '../assets/ReelScreenShot.png';
+import auroraImg from '../assets/final.jpg';
+
 const projectsList = [
-  { name: 'Urgent Care Management System', path: '/UrgentCare', description: 'A short project description goes here.', tech: 'asdfasdf', image: '' },
-  { name: '3D Portfolio Website', path: '/Portfolio', description: 'A short project description goes here.', tech: 'asdfasdf', image: '' },
-  { name: 'Demo Reel', path: '/DemoReel', description: 'A short project description goes here.', tech: 'asdfasdf', image: '' },
-  { name: 'Aurora Borealis Tool', path: '/Aurora', description: 'A short project description goes here.', tech: 'asdfasdf', image: '' },
+  { name: 'Urgent Care Management System', path: '/UrgentCare', description: 'Clinic management web app with full-stack database', tech: 'MySQL, Node.js, React.js, Vite, Azure', image: urgentCareImg },
+  { name: '3D Portfolio Website', path: '/Portfolio', description: 'An interactive personal 3d portfolio website', tech: 'react.js, spline, blender', image: portfolioImg },
+  { name: 'Demo Reel', path: '/DemoReel', description: 'Technical Director Demo Reel', tech: 'Unity, Blender, Maya, Python, Qt', image: demoReelImg },
+  { name: 'Aurora Borealis Tool', path: '/Aurora', description: 'Autodesk Maya Aurora Borealis Maker', tech: 'Python, Maya, Arnold, Qt', image: auroraImg },
 ];
 
 const Projects = () => {
