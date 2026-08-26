@@ -20,8 +20,8 @@ export const SceneContext = createContext(null);
 const SCENE_URLS = [
   'https://prod.spline.design/Hbtm1NoPMbDZlWqe/scene.splinecode',
   'https://prod.spline.design/xzJc0Qh56nEss09z/scene.splinecode',
-  'https://prod.spline.design/xdjCnoAg0by-34dO/scene.splinecode', //AboutMe
-  'https://prod.spline.design/GMRVPW6hJe-750Rk/scene.splinecode' //Home
+  'https://prod.spline.design/xdjCnoAg0by-34dO/scene.splinecode', 
+  'https://prod.spline.design/GMRVPW6hJe-750Rk/scene.splinecode' 
 ];
 
 function SplinePreloader() {
