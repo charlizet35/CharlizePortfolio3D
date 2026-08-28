@@ -33,7 +33,6 @@ const Projects = () => {
     return () => clearTimeout(loaderTimer);
   }, []);
 
-  // Dedicated navigation handler checking both e.target and direct payload
   const handleObjectClick = (e) => {
     console.log('=== Spline Click Event ===', e);
     const targetName = e?.target?.name || e?.name;
@@ -47,7 +46,6 @@ const Projects = () => {
   const onLoad = (spline) => {
     setSplineApp(spline);
 
-    // Direct listener on the Spline runtime for both release and press
     spline.addEventListener('mouseUp', handleObjectClick);
     spline.addEventListener('mouseDown', handleObjectClick);
 
